@@ -15,7 +15,6 @@ abstract class Tile {
 
     int tileID;
 
-
 /*     A-aaa-B
  *    f       b
  *   f         b
@@ -44,15 +43,7 @@ abstract class Tile {
     }
 
     public void displayTile() {
-        System.out.println("Tile: " + this.getID());
+        System.out.println("Tile: " + this.printTileID());
     }
 
-
-    /*    public void testTile(int tokenTest, Terrain terrainTest) {
-        System.out.println("TESTING TILES(int, enum)");
-        Tile testTile = new Tile(tokenTest, terrainTest);
-        testTile.displayTile();
-        System.out.println("");
-    }
-*/
 }
