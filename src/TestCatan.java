@@ -7,9 +7,9 @@ public class TestCatan {
         dice.testDice();
 */
         //TerrainTile TESTING
-        TerrainTile t1 = new TerrainTile();
-        t1.testTerrainTile(3, TerrainTile.Terrain.DESERT);
-
+/*        TerrainTile t1 = new TerrainTile();
+        t1.testTerrainTile(18, 3, TerrainTile.Terrain.DESERT);
+*/
         //BOARD TESTING
 /*        Board board = new Board();
         board.testBoard();
