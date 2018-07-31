@@ -25,7 +25,7 @@ public class Resources {
         System.out.println("Sheep: " + sheep);
     }
 
-    public void giveResource(Player player, Tile.Terrain terrain, int qty) {
+    public void giveResource(Player player, TerrainTile.Terrain terrain, int qty) {
         switch (terrain) {
             case BRICK:
                 break;
@@ -46,6 +46,6 @@ public class Resources {
 
     public void testResources() {
         this.setupDefaultBankResources();
-        this.giveResource(new Player(), Tile.Terrain.BRICK, 2);
+        this.giveResource(new Player(), TerrainTile.Terrain.BRICK, 2);
     }
 }
