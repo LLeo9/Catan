@@ -8,7 +8,7 @@
  * Terrain in enum
  */
 
-public class Tile {
+abstract class Tile {
 
     public Tile(int i, int i1, Terrain ore) {
     }
@@ -57,11 +57,11 @@ public class Tile {
         System.out.println("Tile: " + this.printToken() + " " + this.getTerrain() + " " + this.hasRobber());
     }
 
-    public void testTile(int tokenTest, Terrain terrainTest) {
+/*    public void testTile(int tokenTest, Terrain terrainTest) {
         System.out.println("TESTING TILES(int, enum, boolean)");
         Tile testTile = new Tile(tokenTest, terrainTest);
         testTile.displayTile();
         System.out.println("");
     }
-
+*/
 }

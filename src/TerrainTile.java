@@ -10,6 +10,9 @@
 
 public class TerrainTile {
 
+    public TerrainTile() {
+    }
+
     public TerrainTile(int i, int i1, Terrain ore) {
     }
 
@@ -57,9 +60,9 @@ public class TerrainTile {
         System.out.println("TerrainTile: " + this.printToken() + " " + this.getTerrain() + " " + this.hasRobber());
     }
 
-    public void testTile(int tokenTest, Terrain terrainTest) {
+    public void testTerrainTile(int tokenTest, Terrain terrainTest) {
         System.out.println("TESTING TERRTAINTILES(int, enum, boolean)");
-        TerrainTile testTile = new TerrainTile()Tile(tokenTest, terrainTest);
+        TerrainTile testTile = new TerrainTile(tokenTest, terrainTest);
         testTile.displayTile();
         System.out.println("");
     }
