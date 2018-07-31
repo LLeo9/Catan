@@ -8,16 +8,16 @@
  * Terrain in enum
  */
 
-public class TerrainTile {
+public class TerrainTile extends Tile {
 
     public enum Terrain {
         BRICK, WOOD, ORE, GRAIN, SHEEP, DESERT
     }
 
-    int tileID;
     Terrain terr;
     int numToken = 0;
     boolean robber = false;
+
 
 /***** Instantiators *****/
 
@@ -29,7 +29,6 @@ public class TerrainTile {
         terr = terrain;
     }
 
-    //CREATE TERRAIN TILE (with robber passed in)
     public TerrainTile(int id, int token, Terrain terrain, boolean rob) {
         tileID = id;
         numToken = token;
@@ -63,7 +62,7 @@ public class TerrainTile {
     }
 
     public void displayTile() {
-        System.out.println("TerrainTile: " + this.printToken() + " " + this.getTerrain() + " " + this.hasRobber());
+        System.out.println("TerrainTile: " + this.printTileID() + " " + this.printToken() + " " + this.getTerrain() + " " + this.hasRobber());
     }
 
     public void testTerrainTile(int id, int tokenTest, Terrain terrainTest) {

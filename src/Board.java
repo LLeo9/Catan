@@ -57,6 +57,12 @@ public class Board {
         boardTerrainTile[16] = new TerrainTile(16, 5, TerrainTile.Terrain.BRICK);
         boardTerrainTile[17] = new TerrainTile(17, 6, TerrainTile.Terrain.GRAIN);
         boardTerrainTile[18] = new TerrainTile(18, 11, TerrainTile.Terrain.SHEEP);
+
+        //TEST
+/*        for (int i=0; i<19; i++) {
+            boardTerrainTile[i].displayTile();
+        }
+*/
     }
 
     public void createDefaultBoard() throws Exception {

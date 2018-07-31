@@ -10,55 +10,46 @@
 
 abstract class Tile {
 
-    public Tile(int i, int i1, Terrain ore) {
-    }
-
-    public enum Terrain {
-        BRICK, WOOD, ORE, GRAIN, SHEEP, DESERT
+    public Tile() {
     }
 
     int tileID;
-    Terrain terr;
-    int numToken = 0;
-    boolean robber = false;
 
-    public Tile(int token, Terrain terrain) {
-        numToken = token;
-        terr = terrain;
-    }
 
-    public Tile(int id, int token, Terrain terrain, boolean rob) {
+/*     A-aaa-B
+ *    f       b
+ *   f         b
+ *  F           C
+ *   e         c
+ *    e       c
+ *     E-ddd-D
+ */
+
+//    int[][] tileVertices;
+
+
+    public Tile(int id) {
         tileID = id;
-        numToken = token;
-        terr = terrain;
-        robber = rob;
     }
 
-    public int getToken() {
-        return numToken;
+    public int getID() {
+        return tileID;
     }
 
-    public Terrain getTerrain() {
-        return terr;
-    }
-
-    public boolean hasRobber() {
-        return robber;
-    }
-
-    public String printToken() {
-        if (getToken() > 9)
-            return Integer.toString(numToken); //STRINGIFY
+    public String printTileID() {
+        if (tileID > 9)
+            return Integer.toString(tileID); //STRINGIFY
         else
-            return (" " + numToken);
+            return (" " + tileID);
     }
 
     public void displayTile() {
-        System.out.println("Tile: " + this.printToken() + " " + this.getTerrain() + " " + this.hasRobber());
+        System.out.println("Tile: " + this.getID());
     }
 
-/*    public void testTile(int tokenTest, Terrain terrainTest) {
-        System.out.println("TESTING TILES(int, enum, boolean)");
+
+    /*    public void testTile(int tokenTest, Terrain terrainTest) {
+        System.out.println("TESTING TILES(int, enum)");
         Tile testTile = new Tile(tokenTest, terrainTest);
         testTile.displayTile();
         System.out.println("");
