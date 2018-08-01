@@ -62,7 +62,12 @@ public class TerrainTile extends Tile {
     }
 
     public String printTerrain() {
-        return (terr.toString().toLowerCase());
+        if (terr.toString().length() == 3)
+            return (" " + terr.toString().toLowerCase() + " ");
+        if (terr.toString().length() == 4)
+            return (terr.toString().toLowerCase() + " ");
+        else
+            return (terr.toString().toLowerCase());
     }
 
     public void displayTile() {
