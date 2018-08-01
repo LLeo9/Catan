@@ -13,7 +13,7 @@ public class GamePlay {
     Player bank = new Player(); //HOW TO USE THIS???
 
     //Setup board
-    public void setupBoard() throws Exception {
+    public void setUpBoard() throws Exception {
 
         //Create players
         nPlayers = 2; //WILL BE INPUT INSTEAD OF HARDCODED
@@ -59,7 +59,7 @@ public class GamePlay {
     }
 
     public void testGame() throws Exception {
-        this.setupBoard();
+        this.setUpBoard();
         this.RollForResources();
     }
 }
