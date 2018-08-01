@@ -6,10 +6,11 @@ public class Player {
     //Values at Game Start
     int playerID = 0;
     int victoryPts = 0;
-    int nCities = 4;
+    Pieces playerPieces = new Pieces();
+/*    int nCities = 4;
     int nSettlements = 5;
     int nRoadPieces = 15;
-
+*/
     public void setPlayerID(int id) {
         playerID = id;
     }
@@ -22,7 +23,7 @@ public class Player {
         return victoryPts;
     }
 
-    public int getnCities() {
+/*    public int getnCities() {
         return nCities;
     }
 
@@ -33,12 +34,21 @@ public class Player {
     public int getnRoadPieces() {
         return nRoadPieces;
     }
-
+*/
     public void chgVictoryPts(int changeBy) {
         victoryPts += changeBy;
     }
 
+    public void printVictoryPts() {
+        System.out.println("Victory Points: " + victoryPts);
+    }
+
     public void testPlayer() {
         System.out.println("TESTING PLAYER");
+        this.printVictoryPts();
+        this.chgVictoryPts(2);
+        this.printVictoryPts();
+        this.chgVictoryPts(-1);
+        this.printVictoryPts();
     }
 }
