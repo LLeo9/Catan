@@ -62,17 +62,22 @@ public class TerrainTile extends Tile {
     }
 
     public String printTerrain() {
-        return (terr.toString().toLowerCase());
+        if (terr.toString().length() == 3)
+            return (" " + terr.toString().toLowerCase() + " ");
+        if (terr.toString().length() == 4)
+            return (terr.toString().toLowerCase() + " ");
+        else
+            return (terr.toString().toLowerCase());
     }
 
-    public void displayTile() {
+    public void displayTerrainTile() {
         System.out.println("TerrainTile: " + this.printTileID() + " " + this.printToken() + " " + this.printTerrain() + " " + this.hasRobber());
     }
 
     public void testTerrainTile(int id, int tokenTest, Terrain terrainTest) {
         System.out.println("TESTING TERRTAINTILES(int, enum, boolean)");
         TerrainTile testTerrainTile = new TerrainTile(id, tokenTest, terrainTest);
-        testTerrainTile.displayTile();
+        testTerrainTile.displayTerrainTile();
         System.out.println("");
     }
 
